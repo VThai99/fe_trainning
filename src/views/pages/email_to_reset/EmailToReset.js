@@ -1,4 +1,4 @@
-import { CContainer, CFormControl, CButton } from "@coreui/react";
+import { CContainer, CFormControl } from "@coreui/react";
 import { useHistory } from "react-router-dom";
 import Modal from "../../components/modal/Modal";
 const EmailToReset = () => {

@@ -1,5 +1,6 @@
-import { CContainer, CFormControl, CRow, CCol, CButton } from "@coreui/react";
+import { CContainer, CFormControl, CButton } from "@coreui/react";
 import { useEffect, useState } from "react";
+import { useCookies } from "react-cookie";
 import { Link, useHistory } from "react-router-dom";
 import logo from "../../../assets/icons/logo.png";
 const Login = () => {
@@ -7,6 +8,7 @@ const Login = () => {
   const [pass, setPass] = useState("");
   const [errorId, setErrorId] = useState("");
   const [errorPass, setErrorPass] = useState("");
+  const [cookies, setCookies] = useCookies(['username']);
   const history = useHistory();
   useEffect(() => {
     console.log(id, pass);
@@ -18,6 +20,7 @@ const Login = () => {
       setErrorPass("비밀번호를 확인해주세요.");
     } else {
       if (id === "1" && pass === "admin") {
+        setCookies('username', 'Thai')
         history.push("/home");
       } else {
         alert("sai");

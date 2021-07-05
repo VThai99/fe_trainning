@@ -1,0 +1,983 @@
+// @import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+$ipad_pro: 1024px;
+$ipad: 768px;
+$iphone6p: 414px;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+@mixin responIpad_text_50px {
+  @media (max-width: $ipad) {
+    font-size: 50px;
+  }
+}
+@mixin responIpad_text_25px {
+  @media (max-width: $iphone6p) {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+@mixin responIpad_text_15px {
+  @media (max-width: $iphone6p) {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+@mixin responI6p_margin {
+  @media (max-width: $iphone6p) {
+    margin-top: 30px;
+  }
+}
+@mixin responI6p_margin_15 {
+  @media (max-width: $iphone6p) {
+    margin-top: 15px;
+  }
+}
+// header
+.ui_menu {
+  .nav-link {
+    margin: 0 28px;
+    font-family: Roboto;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    color: #757575 !important;
+    @media (max-width: $ipad_pro) {
+      font-size: 15px;
+    }
+  }
+}
+.ui_header_button {
+  font-size: 18px;
+  font-family: Roboto;
+  letter-spacing: 0.03em;
+}
+
+// hero
+.ui_hero {
+  margin-top: 147px;
+  @include responI6p_margin;
+  p:nth-child(1) {
+    font-family: PT Serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 57px;
+    color: #212121;
+    @include responIpad_text_50px;
+    @include responIpad_text_25px;
+  }
+  p:nth-child(2) {
+    font-family: PT Serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 57px;
+    color: #212121;
+    @include responIpad_text_50px;
+    @include responIpad_text_25px;
+  }
+  p:nth-child(3) {
+    margin-top: 22px;
+    color: #757575;
+    font-family: Roboto;
+    font-size: 18px;
+    text-align: center;
+    @media (max-width: $iphone6p) {
+      font-size: 15px;
+    }
+  }
+  :nth-child(4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 58px;
+    @include responI6p_margin;
+    button {
+      background-color: #ff6a00;
+      border-radius: 80px;
+      padding: 14px 28px;
+      font-size: 18px;
+      font-family: Roboto;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: white;
+      border: none;
+      margin: 0 auto;
+      .icon {
+        margin-right: 10px;
+      }
+      &:hover {
+        box-shadow: 0 0 50px #ff6a00;
+      }
+    }
+  }
+}
+
+// slide
+.ui_slide {
+  margin-top: 104px;
+  @include responI6p_margin;
+  .slick-arrow{
+    color: red;
+    background: red;
+  }
+}
+
+// client
+.ui_client {
+  margin-top: 104px;
+  @include responI6p_margin;
+  p:nth-child(1) {
+    font-family: PT Serif;
+    font-weight: bold;
+    color: #9e9e9e;
+    font-size: 18px;
+    text-align: center;
+  }
+  .ui_client_list {
+    @include responI6p_margin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 64px;
+    @media (max-width: $iphone6p) {
+      justify-content: center;
+    }
+    img {
+      @media (max-width: $iphone6p) {
+        margin: 10px 0px;
+      }
+    }
+  }
+}
+// hr
+.ui_hr {
+  margin-top: 104px;
+  @include responI6p_margin;
+}
+
+// hiw
+.ui_hiw {
+  margin-top: 104px;
+  @include responI6p_margin;
+  & > p:nth-child(1) {
+    color: #9e9e9e;
+    text-align: center;
+    font-size: 18px;
+    font-family: PT Serif;
+    font-weight: bold;
+  }
+  & > p:nth-child(2) {
+    color: #212121;
+    font-family: PT Serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 57px;
+    @include responIpad_text_50px;
+    @include responIpad_text_25px;
+  }
+  .list_item {
+    @mixin responIpad_span {
+      @media (max-width: $ipad) {
+        font-size: 50px;
+        height: 70px;
+        width: 70px;
+      }
+    }
+    @mixin responIpad_tittle {
+      @media (max-width: $ipad) {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+    }
+    @mixin responIpad_content {
+      @media (max-width: $ipad) {
+        font-size: 12px;
+      }
+    }
+    @mixin span {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 85px;
+      width: 85px;
+      border-radius: 50%;
+      font-size: 57px;
+      font-family: PT Serif;
+      font-weight: bold;
+    }
+    @mixin tittle {
+      margin-top: 34px;
+      font-size: 18px;
+      font-family: PT Serif;
+      font-weight: bold;
+    }
+    margin-top: 61px;
+    @include responI6p_margin;
+    .item {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      @include responI6p_margin_15;
+      .item_number1 {
+        span {
+          @include span;
+          background: #e6efff;
+          color: #005dff;
+          @include responIpad_span;
+        }
+      }
+      .item_title {
+        @include tittle;
+        color: #005dff;
+        @include responIpad_tittle;
+      }
+      .item_content {
+        margin-top: 15px;
+        color: #616161;
+        font-size: 18px;
+        font-family: Roboto;
+        @include responIpad_content;
+      }
+      // 2
+      .item_number2 {
+        span {
+          @include span;
+          background: #ffefe6;
+          color: #ff6a00;
+          @include responIpad_span;
+        }
+      }
+      .item_title2 {
+        @include tittle;
+        color: #ff6a00;
+        @include responIpad_tittle;
+      }
+      // 3
+      .item_number3 {
+        span {
+          @include span;
+          background: #e5faed;
+          color: #28a154;
+          @include responIpad_span;
+        }
+      }
+      .item_title3 {
+        @include tittle;
+        color: #28a154;
+        @include responIpad_tittle;
+      }
+    }
+  }
+}
+// testi
+.ui_testi {
+  margin-top: 104px;
+  position: relative;
+  @include responI6p_margin;
+  @mixin responIpad_p2 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  .btn_arrow {
+    position: absolute;
+    z-index: 1;
+    bottom: 14%;
+    button {
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid #ff6a00;
+      height: 45px;
+      width: 45px;
+      color: #ff6a00;
+      margin: 0 10px;
+    }
+  }
+  .testi_content {
+    img {
+      @media (max-width: $iphone6p) {
+        display: none;
+      }
+    }
+    p:nth-child(2) {
+      margin-top: 39px;
+      color: #424242;
+      font-family: Roboto;
+      font-weight: bold;
+      font-size: 32px;
+      @media (max-width: $ipad) {
+        @include responIpad_p2;
+      }
+      @include responIpad_text_15px;
+    }
+    p:nth-child(3) {
+      margin-top: 39px;
+      font-family: PT Serif;
+      font-weight: bold;
+      font-size: 18px;
+      color: #757575;
+      @include responIpad_text_15px;
+    }
+    p:nth-child(4) {
+      margin-top: 7px;
+      font-family: PT Serif;
+      font-size: 18px;
+      color: #757575;
+      @include responIpad_text_15px;
+    }
+  }
+  .testi_img {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    @include responI6p_margin;
+    img {
+      border-radius: 32px;
+      width: 70%;
+      box-shadow: 20px -10px 7px #fd8383;
+    }
+  }
+}
+
+// packages
+
+.ui_packages {
+  margin-top: 185px;
+  @include responI6p_margin;
+  @mixin responIpad_cost {
+    @media (max-width: $ipad) {
+      font-size: 40px;
+    }
+  }
+  @mixin cost {
+    margin-top: 16px;
+    font-family: PT Serif;
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 120%;
+  }
+  @mixin level {
+    font-family: PT Serif;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  @mixin amount {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  @mixin li {
+    display: flex;
+    align-items: center;
+    margin: 8px 0px;
+    font-family: Roboto;
+    font-size: 18px;
+    color: #212121;
+  }
+  @mixin icon {
+    margin-right: 8px;
+    font-weight: 900;
+    font-size: 18px;
+    color: #616161;
+  }
+  @mixin button {
+    width: 100%;
+    border-radius: 80px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    background-color: transparent;
+  }
+  .packages_tittle {
+    font-family: PT Serif;
+    font-weight: bold;
+    font-size: 57px;
+    text-align: center;
+    color: #212121;
+    @include responIpad_text_25px;
+  }
+  .packages_list_item {
+    margin-top: 61px;
+    @include responI6p_margin;
+    .item {
+      @include responI6p_margin_15;
+    }
+    // item1
+    .item1 {
+      background-color: #e6efff;
+      border-radius: 16px;
+      // width: 369px;
+      // height: 553px;
+      padding: 48px;
+      .item_level {
+        @include level;
+        color: #616161;
+      }
+      .item_cost {
+        @include cost;
+        color: #005dff;
+        @include responIpad_cost;
+      }
+      .item_amount {
+        @include amount;
+        color: #005dff;
+      }
+      .item_content {
+        margin-top: 48px;
+        ul {
+          li {
+            @include li;
+            @media (max-width: $ipad_pro) {
+              font-size: 15px;
+            }
+            .item_icon {
+              @include icon;
+            }
+          }
+        }
+      }
+      .item_btn {
+        margin-top: 48px;
+        button {
+          @include button;
+          border: 1px solid #005dff;
+          color: #005dff;
+          &:hover {
+            background-color: #005dff;
+            color: white;
+          }
+        }
+      }
+    }
+
+    // item2
+    .item2 {
+      background-color: #ffefe6;
+      border-radius: 16px;
+      padding: 48px;
+      .item_level {
+        @include level;
+        color: #616161;
+      }
+      .item_cost {
+        @include cost;
+        color: #ff6a00;
+        @include responIpad_cost;
+      }
+      .item_amount {
+        @include amount;
+        color: #ff6a00;
+      }
+      .item_content {
+        margin-top: 48px;
+        ul {
+          li {
+            @include li;
+            @media (max-width: $ipad_pro) {
+              font-size: 15px;
+            }
+            .item_icon {
+              @include icon;
+            }
+          }
+        }
+      }
+      .item_btn {
+        margin-top: 48px;
+        button {
+          @include button;
+          border: 1px solid #ff6a00;
+          color: #ff6a00;
+          &:hover {
+            background-color: #ff6a00;
+            color: white;
+          }
+        }
+      }
+    }
+
+    // item3
+    .item3 {
+      background-color: #e5faed;
+      border-radius: 16px;
+      padding: 48px;
+      .item_level {
+        @include level;
+        color: #616161;
+      }
+      .item_cost {
+        @include cost;
+        color: #28a154;
+        @include responIpad_cost;
+      }
+      .item_amount {
+        @include amount;
+        color: #28a154;
+      }
+      .item_content {
+        margin-top: 48px;
+        ul {
+          li {
+            @include li;
+            @media (max-width: $ipad_pro) {
+              font-size: 15px;
+            }
+            .item_icon {
+              @include icon;
+            }
+          }
+        }
+      }
+      .item_btn {
+        margin-top: 48px;
+        button {
+          @include button;
+          border: 1px solid #28a154;
+          color: #28a154;
+          &:hover {
+            background-color: #28a154;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// gallery
+.ui_gallery {
+  margin-top: 209px;
+  @include responI6p_margin;
+  .gallery_tittle {
+    font-family: PT Serif;
+    font-weight: bold;
+    font-size: 57px;
+    text-align: center;
+    color: #212121;
+    @include responIpad_text_50px;
+    @include responIpad_text_25px;
+  }
+  .gallery_tab {
+    margin-top: 46px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    @include responI6p_margin;
+
+    nav {
+      a {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        letter-spacing: 0.03em;
+        color: #9e9e9e;
+        @media (max-width: $iphone6p) {
+          font-size: 9px;
+        }
+      }
+    }
+    .gallery_list_item {
+      .row {
+        .col {
+          margin: 8px;
+          padding: 0px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .gallery_btn {
+    margin-top: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      padding: 14px 40px;
+      border: 1px solid #ff6a00;
+      box-sizing: border-box;
+      border-radius: 80px;
+      background: transparent;
+      color: #ff6a00;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      .icon {
+        font-weight: 900;
+        font-size: 15px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        color: #ff6a00;
+      }
+    }
+  }
+}
+
+// services
+.ui_services {
+  margin-top: 170px;
+  @include responI6p_margin;
+  .service_tittle {
+    font-family: PT Serif;
+    font-weight: bold;
+    font-size: 57px;
+    text-align: center;
+    color: #212121;
+    @include responIpad_text_50px;
+    @include responIpad_text_25px;
+  }
+  .service_item {
+    margin-top: 61px;
+    .item {
+      padding: 10px 70px;
+      @media (max-width: $iphone6p) {
+        padding: 0;
+      }
+      img {
+        width: 100%;
+      }
+      .item_info {
+        margin: 5px 0px;
+        padding: 34px;
+        .item_tittle {
+          font-family: PT Serif;
+          font-weight: bold;
+          font-size: 32px;
+          text-align: left;
+          color: #005dff;
+          @include responIpad_text_25px;
+        }
+        .item_content {
+          margin: 16px 0px 56px 0px;
+          font-family: Roboto;
+          font-size: 18px;
+          color: #212121;
+          @include responIpad_text_15px;
+        }
+        .item_button {
+          a {
+            background: transparent;
+            font-family: Roboto;
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 0.03em;
+            color: #005dff;
+            border: none;
+            margin-right: 29px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .item_info2 {
+        margin: 5px 0px;
+        padding: 34px;
+        .item_tittle {
+          font-family: PT Serif;
+          font-weight: bold;
+          font-size: 32px;
+          text-align: left;
+          color: #28a154;
+          @include responIpad_text_25px;
+        }
+        .item_content {
+          margin: 16px 0px 56px 0px;
+          font-family: Roboto;
+          font-size: 18px;
+          color: #212121;
+          @include responIpad_text_15px;
+        }
+        .item_button {
+          a {
+            background: transparent;
+            font-family: Roboto;
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 0.03em;
+            color: #28a154;
+            border: none;
+            margin-right: 29px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// faq
+.ui_faq {
+  margin-top: 188px;
+  @include responI6p_margin;
+  .faq_tittle {
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 57px;
+    text-align: center;
+    color: #212121;
+    @include responIpad_text_50px;
+    @include responIpad_text_25px;
+  }
+  .faq_info {
+    margin-top: 61px;
+    .tittle {
+      margin-bottom: 29px;
+      font-family: PT Serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      @include responIpad_text_25px;
+    }
+    .content {
+      margin-bottom: 48px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      @include responIpad_text_15px;
+    }
+    .blue {
+      color: #005dff;
+    }
+    .green {
+      color: #28a154;
+    }
+    .orange {
+      color: #ff6a00;
+    }
+  }
+}
+
+// herofooter
+.ui_hero_footer {
+  margin-top: 104px;
+  padding: 72px;
+  @include responI6p_margin;
+  @media (max-width: $iphone6p) {
+    padding: 0;
+  }
+  .tittle {
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 57px;
+    text-align: center;
+    color: #212121;
+    margin-bottom: 51px;
+    @media (max-width: $iphone6p) {
+      margin-bottom: 10px;
+    }
+    @include responIpad_text_50px;
+    @include responIpad_text_25px;
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      padding: 14px 28px;
+      background: #ff6a00;
+      border-radius: 73px;
+      font-family: Roboto;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+      border: none;
+      .icon {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// footer
+.ui_footer {
+  margin-top: 104px;
+  @include responI6p_margin;
+  .menu {
+    display: flex;
+    .list_menu {
+      // margin: 0px 26px;
+      .tittle {
+        font-family: PT Serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        color: #212121;
+        margin-bottom: 24px;
+      }
+      .item_menu {
+        li {
+          font-family: Roboto;
+          font-size: 14px;
+          color: #616161;
+          padding: 5.5px 0px;
+        }
+      }
+    }
+  }
+  .contact {
+    .tittle {
+      font-family: PT Serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      color: #212121;
+    }
+    .phone_number {
+      margin: 24px 0px 12px 0px;
+      font-family: PT Serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      color: #212121;
+      .icon {
+        font-weight: 900;
+        font-size: 18px;
+        color: #005dff;
+        margin-right: 16px;
+      }
+    }
+    .email {
+      margin: 12px 0px 12px 0px;
+      font-family: PT Serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      color: #212121;
+      .icon {
+        font-weight: 900;
+        font-size: 18px;
+        color: #ff6a00;
+        margin-right: 16px;
+      }
+    }
+    .location {
+      margin: 12px 0px 0px 0px;
+      font-family: PT Serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      color: #212121;
+      .icon {
+        font-weight: 900;
+        font-size: 18px;
+        color: #28a154;
+        margin-right: 16px;
+      }
+    }
+  }
+  .social {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include responI6p_margin;
+    .icon {
+      margin: 0px 12px;
+      font-size: 22px;
+    }
+    .facebook {
+      color: #3b5998;
+    }
+    .twitter {
+      color: #00acee;
+    }
+    .instagram {
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      background: radial-gradient(
+        102.89% 102.88% at 60.65% 104.95%,
+        rgba(140, 58, 170, 0) 64%,
+        #8c3aaa 100%
+      );
+    }
+  }
+  .copyright {
+    margin-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    @include responI6p_margin;
+    @media (max-width: $iphone6p) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .right {
+      display: flex;
+      p:nth-child(1) {
+        font-family: PT Serif;
+        font-size: 14px;
+        color: #7e92b3;
+      }
+      .icon {
+        margin: 0px 10px;
+        font-size: 16px;
+        color: #7e92b3;
+      }
+      p:nth-child(3) {
+        font-family: PT Serif;
+        font-size: 14px;
+        color: #6c7e99;
+      }
+    }
+    .left {
+      display: flex;
+      p:nth-child(1) {
+        font-family: PT Serif;
+        font-size: 14px;
+        color: #7e92b3;
+        .icon {
+          font-weight: 900;
+          font-size: 13px;
+          color: #eb6453;
+        }
+      }
+      p:nth-child(2) {
+        font-family: PT Serif;
+        margin-left: 8px;
+        font-weight: bold;
+        font-size: 14px;
+        color: #6c7e99;
+      }
+    }
+  }
+}
